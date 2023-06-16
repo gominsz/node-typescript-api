@@ -12,11 +12,11 @@ export class SetupServer extends Server {
   }
 
   public init (): void {
-    this.SetupExpress();
+    this.setupExpress();
     this.setupControllers();
   }
 
-  private SetupExpress(): void {
+  private setupExpress(): void {
     this.app.use(bodyParser.json());
   }
 
