@@ -1,1 +1,1 @@
-console.log('Ta funcionando RELAXA!!')
+console.log('Ta funcionando RELAXA!!');

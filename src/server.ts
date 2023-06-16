@@ -3,15 +3,12 @@ import './util/modules-alias';
 import { Server } from '@overnightjs/core';
 import { ForecastController } from './controllers/forecast';
 
-
 export class SetupServer extends Server {
-
-
   constructor(private port = 3000) {
     super();
   }
 
-  public init (): void {
+  public init(): void {
     this.setupExpress();
     this.setupControllers();
   }
@@ -25,7 +22,7 @@ export class SetupServer extends Server {
     this.addControllers([forecastController]);
   }
 
-  public getApp(){
+  public getApp() {
     return this.app;
   }
 }
