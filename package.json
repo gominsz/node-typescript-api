@@ -10,6 +10,7 @@
     "lint": "eslint ./src ./test --ext .ts",
     "lint:fix": "eslint ./src ./test --ext .ts --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test:init": "jest",
     "style:check": "prettier --check 'src/**/*.ts' 'test/**/*.ts'",
     "style:fix": "prettier --write src/**/*.ts test/**/*.ts",
     "test:functional": "jest --projects ./test --runInBand"
@@ -22,6 +23,7 @@
   "author": "Matheus Camargo",
   "license": "ISC",
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/express": "^4.17.17",
     "@types/jest": "^29.5.2",
     "@types/module-alias": "^2.0.1",
@@ -39,6 +41,7 @@
   },
   "dependencies": {
     "@overnightjs/core": "^1.7.6",
+    "axios": "^1.4.0",
     "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "module-alias": "^2.2.3"
