@@ -10,7 +10,9 @@ describe('StormGlass client', () => {
     const lat = -33.792726;
     const lng = 151.289824;
 
-    axios.get = jest.fn().mockReturnValue(stormGlassWeather3HoursFicture);
+    axios.get = jest
+      .fn()
+      .mockReturnValue({ data: stormGlassWeather3HoursFicture });
 
     const stormTGlass = new StormGlass(axios);
     const response = await stormTGlass.fetchPoints(lat, lng);
