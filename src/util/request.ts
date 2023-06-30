@@ -12,13 +12,11 @@ export class Request {
     return this.request.get<T, Response<T>>(url, config);
   }
 
-  public static isRequestError(error: Error): boolean {
-    return !!(
-      (error as AxiosError).response && (error as AxiosError).response?.status
-    );
+  public static isRequestError(error: AxiosError): boolean {
+    return !!(error.response && error.response.status);
   }
-
-  public static extractErrorData(
+}
+/*public static extractErrorData(
     error: unknown
   ): Pick<AxiosResponse, 'data' | 'status'> {
     const axiosError = error as AxiosError;
@@ -30,4 +28,4 @@ export class Request {
     }
     throw Error(`The error ${error} is not a Request Error`);
   }
-}
+}*/
