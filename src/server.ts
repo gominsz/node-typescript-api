@@ -45,4 +45,8 @@ export class SetupServer extends Server {
   public async close(): Promise<void> {
     await database.close();
   }
+
+  public start(callback): void {
+    this.app.listen(this.port, callback);
+  }
 }
