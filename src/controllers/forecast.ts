@@ -46,4 +46,8 @@ export class ForecastController {
       },
     ]);
   }
+  @Get('batatinha')
+  public getForecastForbatatinhaUser(_: Request, res: Response): void {
+    res.send('batatinha');
+  }
 }
