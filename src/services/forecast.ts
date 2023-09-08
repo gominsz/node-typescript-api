@@ -16,8 +16,7 @@ export interface Beach {
   name: string;
   position: BeachPosition;
   lat: number;
-  lng: number;
-  user: string;
+  lng: number; 
 }
 
 export interface BeachForecast extends Omit<Beach, 'user'>, ForecastPoint {}
