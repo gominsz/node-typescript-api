@@ -12,7 +12,7 @@ export enum CUSTOM_VALIDATION {
   DUPLICATED = 'DUPLICATED',
 }
 
-type UserDocument = User & Document;
+interface UserModel extends Omit<User, '_id'>, Document {}
 
 const schema = new mongoose.Schema(
   {
@@ -60,7 +60,4 @@ schema.pre('save', async function (): Promise<void> {
   }
 });
 
-export const User: Model<UserDocument> = mongoose.model<UserDocument>(
-  'User',
-  schema
-);
+export const User: Model<UserModel> = mongoose.model<UserModel>('User', schema);
